@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-	<!-- SEO -->
-	<title>Nina Carducci – Photographe professionnelle</title>
-	<meta name="description" content="Découvrez le travail de Nina Carducci, photographe passionnée spécialisée dans les portraits, mariages et événements professionnels.">
-
-	<!-- Styles -->
-	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.css">
-	<link rel="stylesheet" href="./assets/style.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet">
-
-	<!-- Scripts -->
-	<script src="./assets/bootstrap/bootstrap.bundle.js"></script>
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<script src="./assets/maugallery.js"></script>
-	<script src="./assets/scripts.js"></script>
-</head>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<!-- SEO -->
+		<title>Nina Carducci – Photographe professionnelle</title>
+		<meta name="description" content="Découvrez le travail de Nina Carducci, photographe passionnée spécialisée dans les portraits, mariages et événements professionnels.">
+		
+		<!-- Préchargement de la police -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet">
+	  
+		<!-- Preload image LCP (slider image visible au chargement) -->
+		<link rel="preload" as="image" href="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp">
+	  
+		<!-- Styles -->
+		<link rel="stylesheet" href="./assets/bootstrap/bootstrap.css">
+		<link rel="stylesheet" href="./assets/style.css">
+	  
+		<!-- Scripts : différés pour ne pas bloquer le rendu -->
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+				integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" 
+				crossorigin="anonymous" defer></script>
+		<script src="./assets/bootstrap/bootstrap.bundle.js" defer></script>
+		<script src="./assets/maugallery.js" defer></script>
+		<script src="./assets/scripts.js" defer></script>
+	  </head>	  
 <body>
 <header class="top-header">
 	<h3 class="name">Nina Carducci</h3>
@@ -48,13 +55,13 @@
 		</div>
 		<div class="carousel-inner">
 			<figure class="carousel-item active">
-				<img src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp" class="d-block w-100" alt="Photographie d'un homme en costume sur un passage piétons">
+				<img src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp" class="d-block w-100" alt="Photographie d'un homme en costume sur un passage piétons" fetchpriority="high">
 			</figure>
 			<figure class="carousel-item">
-				<img src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.webp" class="d-block w-100" alt="Photographie d'une foule lors d'un concert">
+				<img src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.webp" class="d-block w-100" alt="Photographie d'une foule lors d'un concert" loading="lazy">
 			</figure>
 			<figure class="carousel-item">
-				<img src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.webp" class="d-block w-100" alt="Photographie lors d'un mariage">
+				<img src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.webp" class="d-block w-100" alt="Photographie lors d'un mariage" loading="lazy">
 			</figure>
 		</div>
 		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -84,15 +91,15 @@
 	<h2 class="title">Portfolio</h2>
 	<div class="container py-3">
 		<div class="gallery" style="display: none">
-			<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp" alt="Photographie lors d'un concert avec lumières oranges"/>
-			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.webp" alt="Photographie d'un homme en costume de face"/>
-			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.webp" alt="Photographie en entreprise de deux femmes souriantes"/>
-			<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.webp" alt="Photographie lors d'un mariage avec deux personnes qui se prennent les mains"/>
-			<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.webp" alt="Photographie d'un homme de face fermant les yeux"/>
-			<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.webp" alt="Photographie d'un couple lors d'un mariage se regardant avec le sourire"/>
-			<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.webp" alt="Photographie d'une femme de face avec un pull noir qui regarde vers le bas"/>
-			<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.webp" alt="Photographie d'un chanteur lors d'un concert levant la main"/>
-			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.webp" alt="Photographie d'une femme souriante en entreprise avec son ordinateur portable"/>
+			<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp" alt="Photographie lors d'un concert avec lumières oranges" loading="lazy"/>
+			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.webp" alt="Photographie d'un homme en costume de face" loading="lazy"/>
+			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.webp" alt="Photographie en entreprise de deux femmes souriantes" loading="lazy"/>
+			<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.webp" alt="Photographie lors d'un mariage avec deux personnes qui se prennent les mains" loading="lazy"/>
+			<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.webp" alt="Photographie d'un homme de face fermant les yeux" loading="lazy"/>
+			<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.webp" alt="Photographie d'un couple lors d'un mariage se regardant avec le sourire" loading="lazy"/>
+			<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.webp" alt="Photographie d'une femme de face avec un pull noir qui regarde vers le bas" loading="lazy"/>
+			<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.webp" alt="Photographie d'un chanteur lors d'un concert levant la main" loading="lazy"/>
+			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.webp" alt="Photographie d'une femme souriante en entreprise avec son ordinateur portable" loading="lazy"/>
 		</div>
 	</div>
 	<div class="quote">
@@ -165,7 +172,7 @@
 		</form>
 	  </div>
 	  <div class="picture right">
-		<img src="./assets/images/camera.webp" alt="Photographie d’un appareil photo vintage en gros plan" />
+		<img src="./assets/images/camera.webp" alt="Photographie d’un appareil photo vintage en gros plan"/>
 	  </div>
 	</div>
 </footer>
